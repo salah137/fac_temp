@@ -8,39 +8,38 @@ class PostLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 300,
+      height: 400,
       width: 200,
       child: Column(
         children: [
-          Row(
-            children: [
-              CircleAvatar(
-                backgroundImage: NetworkImage(post.creator.imageUrl),
-                radius: 30,
-              ),
-              SizedBox(
-                width: 5,
-              ),
-              Container(
-                child: Text(
-                  post.creator.name,
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
+          Container(
+            margin: EdgeInsets.all(10),
+            child: Row(
+              children: [
+                CircleAvatar(
+                  backgroundImage: NetworkImage(post.creator.imageUrl),
+                  radius: 30,
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                Container(
+                  child: Text(
+                    post.creator.name,
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
-              ),
-            ],
-
+              ],
+            ),
           ),
-
           post.post,
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                "${post.likes} like"
-              ),
+              Text("${post.likes} like"),
             ],
           )
         ],
