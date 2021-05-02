@@ -8,7 +8,7 @@ class PosyView extends StatelessWidget {
     return ListView.builder(
       itemCount: posts.length,
       itemBuilder: (_,int i){
-        return PostLayout(post: posts[i],);
+        return Container(child: PostLayout(post: posts[i],));
       },
     );
   }

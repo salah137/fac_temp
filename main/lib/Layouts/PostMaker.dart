@@ -35,7 +35,7 @@ class PostLayout extends StatelessWidget {
               ],
             ),
           ),
-          Container(color: Colors.black12, child: post.post),
+          Container( child: post.post),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
