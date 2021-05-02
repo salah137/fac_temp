@@ -35,11 +35,31 @@ class PostLayout extends StatelessWidget {
               ],
             ),
           ),
-          post.post,
+          Container(color: Colors.black12, child: post.post),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text("${post.likes} like"),
+            ],
+          ),
+          Row(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  IconButton(
+                      icon: Icon(Icons.favorite_border), onPressed: () {})
+                ],
+              ),
+              SizedBox(
+                width: 250,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  IconButton(icon: Icon(Icons.comment), onPressed: (){})
+                ],
+              )
             ],
           )
         ],

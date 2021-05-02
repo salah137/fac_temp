@@ -8,14 +8,18 @@ List<Post> posts = [
       20.2,
       Column(
         children: [
-          Text("Soooo soo good"),
+          Container(color: Colors.white, margin: EdgeInsets.all(10),child: Text("Soooo soo good")),
+          SizedBox(height: 10,),
           Container(
+            color: Colors.black12,
               height: 200,
-              width: double.infinity - 20,
+              width: double.infinity ,
               child: Image(
+
                 image: NetworkImage(
                     "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80"),
-              ))
+              )
+            ,)
         ],
       ),
       12),
