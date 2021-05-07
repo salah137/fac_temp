@@ -14,7 +14,26 @@ class MyApp extends StatelessWidget {
          canvasColor: Colors.blueGrey.withOpacity(0.5),
         primarySwatch: Colors.indigo,
       ),
-      home: Home(), // home: ,
+      home: DefaultTabController(
+         initialIndex: 0,
+        length: 1,
+        child: Scaffold(
+          appBar: AppBar(
+            bottom: TabBar(
+              isScrollable: true,
+              tabs: [
+                  Tab(icon: Icon(Icons.home),text: "Home",)
+              ],
+            ),
+
+          ),
+          body: TabBarView(
+            children: [
+              Home()
+            ],
+          ),
+        ),
+      ) // home: ,
     );
   }
 }
