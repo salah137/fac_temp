@@ -11,22 +11,22 @@ class FriendScreen extends StatefulWidget {
 }
 
 class _FriendScreenState extends State<FriendScreen> {
-  List <User> usedList ;
 
+  var usedList = users.where((e){
+   return e.added == false;
+  }).toList();
+
+  
   @override
   Widget build(BuildContext context) {
-    for(var i in users){
-      if(i.added == false){
-        usedList.add(i);
-      }
-    }
     return Scaffold(
-      body : ListView.builder(
-        itemCount: usedList.length,
-        itemBuilder: (_,i){
-          return AddIteme(how: i,);
-        },
-      )
-    );
+        body: ListView.builder(
+      itemCount: usedList.length,
+      itemBuilder: (_, i) {
+        return AddIteme(
+          how: usedList[i],
+        );
+      },
+    ));
   }
 }
