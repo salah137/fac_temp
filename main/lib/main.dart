@@ -24,7 +24,7 @@ class _MyAppState extends State<MyApp> {
       ),
       home: DefaultTabController(
          initialIndex: 0,
-        length: 1,
+        length: 2,
         child: Scaffold(
           appBar: AppBar(
             title: typing ? TextBox() : Text("Fac"),
