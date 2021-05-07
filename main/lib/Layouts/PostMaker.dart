@@ -54,15 +54,19 @@ class PostLayout extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  padding: EdgeInsets.all(10),
+                  padding: EdgeInsets.only(
+                    right: 50,
+                  ),
                   child: Icon(Icons.favorite),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(10, 5, 50, 5),
+                  margin: EdgeInsets.only(
+                    right: 50,
+                  ),
                   child: Icon(Icons.comment),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(50, 5, 50, 5),
+                  margin: EdgeInsets.all(10),
                   child: Icon(Icons.share),
                 )
               ],
