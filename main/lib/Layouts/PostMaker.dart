@@ -26,16 +26,24 @@ class PostLayout extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.all(5),
                   margin: EdgeInsets.all(10),
-                  color: Colors.black87,
+                  decoration: BoxDecoration(
+                    color: Colors.white10.withOpacity(0.4),
+                    borderRadius: BorderRadius.circular(10)
+                  ),
                   child: Row(
                     children: [
-                      CircleAvatar(
-                          backgroundImage: NetworkImage(
-                        post.creator.imageUrl,
-                      )),
+                      Container(
+                        margin: EdgeInsets.only(
+                          right: 10
+                        ),
+                        child: CircleAvatar(
+                            backgroundImage: NetworkImage(
+                          post.creator.imageUrl,
+                        )),
+                      ),
                       Text(
                         post.creator.name,
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        style: TextStyle(fontSize: 20, ),
                       ),
                     ],
                   ),
