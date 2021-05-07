@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Screens/HomePage.dart';
+import './Screens/FreindsScreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -38,14 +39,16 @@ class _MyAppState extends State<MyApp> {
             bottom: TabBar(
               isScrollable: true,
               tabs: [
-                  Tab(icon: Icon(Icons.home),text: "Home",)
+                  Tab(icon: Icon(Icons.home),text: "Home",),
+                  Tab(icon: Icon(Icons.ac_unit), text: 'Add Friend',)
               ],
             ),
 
           ),
           body: TabBarView(
             children: [
-              Home()
+              Home(),
+              FriendScreen()
             ],
           ),
         ),

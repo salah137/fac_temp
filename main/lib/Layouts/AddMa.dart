@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../classs/FriendClass.dart';
 
 class AddIteme extends StatelessWidget {
-  final User how;
+  final  how;
   const AddIteme({Key key, this.how}) : super(key: key);
 
   @override
