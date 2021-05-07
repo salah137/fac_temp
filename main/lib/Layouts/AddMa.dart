@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import '../classs/FriendClass.dart';
 
@@ -9,7 +11,7 @@ class AddIteme extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Stack(
-        alignment: Alignment.centerLeft,
+        alignment: Alignment.topCenter,
         children: [
           Stack(
             alignment: Alignment.bottomLeft,
@@ -18,10 +20,13 @@ class AddIteme extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10)),
-                width: 200,
+                width: 500,
+                height: 150,
                 padding: EdgeInsets.all(10),
                 alignment: Alignment.center,
-                child: Text(how.name),
+                child: Text(how.name, style: TextStyle(
+                  fontSize: 20
+                ),),
               ),
               Row(
                 children: [
@@ -35,10 +40,11 @@ class AddIteme extends StatelessWidget {
                         decoration: BoxDecoration(
                             color: Colors.indigo,
                             borderRadius: BorderRadius.circular(5)),
-                        child: Text("Add"),
+                        child: Text("It is My Friend"),
                       ),
                     ),
                   ),
+                  SizedBox(width: 10,),
                   Container(
                     margin: EdgeInsets.all(10),
                     child: InkWell(
@@ -49,7 +55,7 @@ class AddIteme extends StatelessWidget {
                         decoration: BoxDecoration(
                             color: Colors.indigo,
                             borderRadius: BorderRadius.circular(5)),
-                        child: Text("Add"),
+                        child: Text("I don't know it"),
                       ),
                     ),
                   ),
@@ -57,9 +63,12 @@ class AddIteme extends StatelessWidget {
               )
             ],
           ),
-          CircleAvatar(
-            backgroundImage: NetworkImage(how.imageUrl),
-            radius: 50,
+          Container(
+            margin: EdgeInsets.all(20),
+            child: CircleAvatar(
+              backgroundImage: NetworkImage(how.imageUrl),
+              radius: 30,
+            ),
           )
         ],
       ),

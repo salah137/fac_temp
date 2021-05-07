@@ -10,6 +10,10 @@ class ItemStatus extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(10),
       child: Container(
+        decoration: BoxDecoration(
+          color: Colors.lightGreen,
+          borderRadius: BorderRadius.circular(10),
+        ),
         margin: EdgeInsets.all(10),
         height: 150,
         width: 100,
@@ -29,7 +33,9 @@ class ItemStatus extends StatelessWidget {
             Container(
               padding: EdgeInsets.all(5),
               child: CircleAvatar(
-                backgroundImage: NetworkImage(item.creator.imageUrl, ),
+                backgroundImage: NetworkImage(
+                  item.creator.imageUrl,
+                ),
               ),
             )
           ],

@@ -23,8 +23,13 @@ class _FriendScreenState extends State<FriendScreen> {
         body: ListView.builder(
       itemCount: usedList.length,
       itemBuilder: (_, i) {
-        return AddIteme(
-          how: usedList[i],
+        return Column(
+          children: [
+            AddIteme(
+              how: usedList[i],
+            ),
+            SizedBox(height: 30,)
+          ],
         );
       },
     ));
