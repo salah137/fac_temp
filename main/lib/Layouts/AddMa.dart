@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import '../classs/FriendClass.dart';
 
 class AddIteme extends StatelessWidget {
   final  how;
@@ -64,7 +63,7 @@ class AddIteme extends StatelessWidget {
             ],
           ),
           Container(
-            margin: EdgeInsets.all(20),
+            margin: EdgeInsets.all(5),
             child: CircleAvatar(
               backgroundImage: NetworkImage(how.imageUrl),
               radius: 30,

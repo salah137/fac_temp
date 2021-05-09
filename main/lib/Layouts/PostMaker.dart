@@ -8,10 +8,7 @@ class PostLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      borderRadius: BorderRadius.circular(15),
-      onTap: () {},
-      child: Card(
+    return Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
         child: Column(
           children: [
@@ -57,23 +54,22 @@ class PostLayout extends StatelessWidget {
                   padding: EdgeInsets.only(
                     right: 50,
                   ),
-                  child: Icon(Icons.favorite),
+                  child: IconButton(icon : Icon( Icons.favorite), onPressed: (){},),
                 ),
                 Container(
                   margin: EdgeInsets.only(
                     right: 50,
                   ),
-                  child: Icon(Icons.comment),
+                  child: IconButton(icon :Icon(Icons.comment),onPressed: (){},),
                 ),
                 Container(
                   margin: EdgeInsets.all(10),
-                  child: Icon(Icons.share),
+                  child:  IconButton(icon :Icon(Icons.share),onPressed: (){},),
                 )
               ],
             )
           ],
         ),
-      ),
     );
   }
 }
