@@ -11,7 +11,7 @@ List<Post> posts = [
           Container(
               color: Colors.white,
               margin: EdgeInsets.all(10),
-              child: Text("Soooo soo good")),
+              child: SelectableText("Soooo soo good")),
           SizedBox(
             height: 10,
           ),
@@ -35,7 +35,7 @@ List<Post> posts = [
         height: 200,
         width: double.infinity - 20,
         color: Colors.red,
-        child: Text("I am funny hhhhh"),
+        child: SelectableText("I am funny hhhhh"),
       ),
       10),
   Post(
@@ -58,7 +58,7 @@ List<Post> posts = [
         height: 200,
         width: double.infinity - 20,
         color: Colors.amber,
-        child: Text("Hello Every Body"),
+        child: SelectableText("Hello Every Body"),
       ),
       1)
 ];
